@@ -6,16 +6,16 @@ var path = require("path");
 
 module.exports = {
     mode: "development",
-    entry: "./src/App.fs.js",
+    entry: {
+        PopUp: "./src/PopUp.fs.js",
+        Background: "./src/Background.fs.js",
+        Content: "./src/Content.fs.js"
+    },
     output: {
         path: path.join(__dirname, "./public"),
-        filename: "bundle.js",
+        filename: "[name].bundle.js",
     },
-    devServer: {
-        publicPath: "/",
-        contentBase: "./public",
-        port: 8080,
-    },
+    devtool:"source-map",
     module: {
     }
 }
