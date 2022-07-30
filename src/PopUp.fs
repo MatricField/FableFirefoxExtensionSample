@@ -1,4 +1,4 @@
-module App
+module FableFirefoxExtensionSample.PopUp
 
 open Browser.Dom
 

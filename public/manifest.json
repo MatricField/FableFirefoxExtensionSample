@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "FableFirefoxExtensionSample",
+    "version": "1.0",
+    "description": "Sample extension of the use Fable",
+    "background": {
+        "page": "Background.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "Content.bundle.js"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_popup": "PopUp.html"
+    }
+}

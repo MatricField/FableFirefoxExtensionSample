@@ -1,6 +1,5 @@
-# Fable Minimal App
+# Fable Firefox Extension Sample
 
-This is a small Fable app project so you can easily get started and add your own code progressively. For more comprehensive templates [check this page](https://fable.io/docs/2-steps/your-first-fable-project.html).
 
 ## Requirements
 
@@ -32,10 +31,14 @@ JS dependencies are declared in `package.json`, while `package-lock.json` is a l
 
 [Webpack](https://webpack.js.org) is a JS bundler with extensions, like a static dev server that enables hot reloading on code changes. Configuration for Webpack is defined in the `webpack.config.js` file. Note this sample only includes basic Webpack configuration for development mode, if you want to see a more comprehensive configuration check the [Fable webpack-config-template](https://github.com/fable-compiler/webpack-config-template/blob/master/webpack.config.js).
 
-### F#
+## Notes
 
-The sample only contains two F# files: the project (.fsproj) and a source file (.fs) in the `src` folder.
+### Browser Extension Structure
 
-### Web assets
+* Webpack controls the structure of output files. Check [entry point](https://webpack.js.org/concepts/entry-points/) and [output](https://webpack.js.org/concepts/output/) in webpack documentation for detailed information.
 
-The `index.html` file and other assets like an icon can be found in the `public` folder.
+* manifest.json is not included in the template. Check Mozilla docs for how to create one.
+
+### Eval Issues
+
+* Webpack's [Devtools](https://webpack.js.org/configuration/devtool/) generates evals by default which is is not allowed by firefox's addon policy. Specify "source-map" to generate source map instead of evals.
