@@ -13,8 +13,6 @@
 * Build the extension project: `npm run-script build`
 * Load the extension as a [temporary addon](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/).
 
-Any modification you do to the F# code will be reflected in the web page after saving.
-
 > Note: check the "scripts" section in `package.json` to see the commands triggered by the steps above.
 
 ## Bundling for release
