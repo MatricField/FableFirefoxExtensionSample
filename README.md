@@ -10,14 +10,11 @@
 ## Building and testing the extension
 
 * Install dependencies: `npm install`
-* Build the extension project: `npm run-script build`
+* Build the extension project: `npm run build`
 * Load the extension as a [temporary addon](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/).
+* The compiled output ends up in the `public` folder under the name `*.bundle.js`.
 
 > Note: check the "scripts" section in `package.json` to see the commands triggered by the steps above.
-
-## Bundling for release
-
-Run the following command to compile and bundle up all your F# code into one Javascript file: `npm run build`. The compiled output ends up in the `public` folder under the name `bundle.js`.
 
 ## Project structure
 
